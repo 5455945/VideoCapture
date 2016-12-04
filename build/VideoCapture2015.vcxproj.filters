@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="../src/CaptrueAudio.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/CaptureVideo.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/common.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/Main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/SampleGrabberCallback.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../inc/CaptureAudio.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="../inc/CaptureVideo.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="../inc/common.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="../inc/qedit.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="../inc/resource.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="../inc/SampleGrabberCallback.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="inc">
+      <UniqueIdentifier>{595df75a-0d04-4ef5-ab79-0b98a1e2e1bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{afb15b92-ed83-485e-a789-4cdaefc67212}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{bd4ef8ed-d031-496a-957e-55f5e9025993}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="../res/VideoCapture.rc">
+      <Filter>res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../res/VideoCapture.ico">
+      <Filter>res</Filter>
+    </None>
+  </ItemGroup>
+</Project>
