@@ -353,6 +353,10 @@
 				RelativePath="..\src\SampleGrabberCallback.cpp"
 				>
 			</File>
+			<File
+				RelativePath="..\src\BmpToJpg.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -381,6 +385,10 @@
 			</File>
 			<File
 				RelativePath="..\inc\SampleGrabberCallback.h"
+				>
+			</File>
+			<File
+				RelativePath="..\inc\BmpToJpg.h"
 				>
 			</File>
 		</Filter>

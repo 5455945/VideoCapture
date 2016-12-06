@@ -1,4 +1,5 @@
 #include "SampleGrabberCallback.h"
+#include "BmpToJpg.h"
 
 SampleGrabberCallback::SampleGrabberCallback()
 {
@@ -70,7 +71,7 @@ BOOL SampleGrabberCallback::SaveBitmap(BYTE * pBuffer, long lBufferSize )
 		CREATE_ALWAYS,0,NULL);
 	if(hf == INVALID_HANDLE_VALUE)
 	{
-		return E_FAIL;
+		return FALSE;
 	}
 
 	BITMAPFILEHEADER bfh;  //Set bitmap header
@@ -93,5 +94,40 @@ BOOL SampleGrabberCallback::SaveBitmap(BYTE * pBuffer, long lBufferSize )
 	//Write the file Data
 	WriteFile( hf, pBuffer, lBufferSize, &dwWritten, NULL );
 	CloseHandle( hf );
-	return 0;
+
+	// 同时保存jpg图片
+	char szSrcFileName[MAX_PATH];
+	char szDstFileName[MAX_PATH];
+	memset(szSrcFileName, 0, sizeof(char)*(MAX_PATH));
+	memset(szDstFileName, 0, sizeof(char)*(MAX_PATH));
+#ifdef _UNICODE
+	DWORD num = WideCharToMultiByte(CP_ACP, 0, m_chSwapStr, -1, NULL, 0, NULL, 0);
+	char *pbuf = NULL;
+	pbuf = (char*)malloc(num * sizeof(char)) + 1;
+	if (pbuf == NULL)
+	{
+	    free(pbuf);
+		return false;
+	}
+	memset(pbuf, 0, num * sizeof(char) + 1);
+	WideCharToMultiByte(CP_ACP, 0, m_chSwapStr, -1, pbuf, num, NULL, 0);
+#else
+	pbuf = (char*)m_chSwapStr;
+#endif
+
+	size_t len = strlen(pbuf);
+	memcpy(szSrcFileName, pbuf, len);
+	memcpy(szDstFileName, pbuf, len);
+	memcpy(szDstFileName + len - 3, "jpg", 3);
+	BitmapToJpg(szSrcFileName, szDstFileName);
+
+	return TRUE;
+}
+// bitmap图片转换成jpg格式
+bool SampleGrabberCallback::BitmapToJpg(const char* szSrcFileName, const char* szDstFileName)
+{
+	CBmpToJpg	m_bmpToJpg;
+	bool bRet = m_bmpToJpg.BMPToJPG(szSrcFileName, szDstFileName, 100);
+
+	return bRet;
 }

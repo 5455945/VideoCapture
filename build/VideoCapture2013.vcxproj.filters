@@ -16,6 +16,9 @@
     <ClCompile Include="../src/SampleGrabberCallback.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="../src/BmpToJpg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="../inc/CaptureAudio.h">
@@ -34,6 +37,9 @@
       <Filter>inc</Filter>
     </ClInclude>
     <ClInclude Include="../inc/SampleGrabberCallback.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="../inc/BmpToJpg.h">
       <Filter>inc</Filter>
     </ClInclude>
   </ItemGroup>
