@@ -354,7 +354,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\src\BmpToJpg.cpp"
+				RelativePath="..\src\ImageFormatConversion.cpp"
 				>
 			</File>
 		</Filter>
@@ -388,7 +388,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\inc\BmpToJpg.h"
+				RelativePath="..\inc\ImageFormatConversion.h"
 				>
 			</File>
 		</Filter>

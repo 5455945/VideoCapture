@@ -142,7 +142,7 @@
     <ClCompile Include="../src/common.cpp" />
     <ClCompile Include="../src/Main.cpp" />
     <ClCompile Include="../src/SampleGrabberCallback.cpp" />
-    <ClCompile Include="../src/BmpToJpg.cpp" />
+    <ClCompile Include="..\src\ImageFormatConversion.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="../inc/CaptureAudio.h" />
@@ -151,7 +151,7 @@
     <ClInclude Include="../inc/qedit.h" />
     <ClInclude Include="../inc/SampleGrabberCallback.h" />
     <ClInclude Include="../inc/resource.h" />
-    <ClInclude Include="../inc/BmpToJpg.h" />
+    <ClInclude Include="..\inc\ImageFormatConversion.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="../res/VideoCapture.rc" />

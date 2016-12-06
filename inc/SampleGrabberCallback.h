@@ -14,7 +14,6 @@ public:
 	
 	SampleGrabberCallback();
 	BOOL SaveBitmap(BYTE * pBuffer, long lBufferSize ); //保存bitmap图片
-	bool BitmapToJpg(const char* szSrcFileName, const char* szDstFileName);  // bitmap图片转换成jpg格式
 public:
 	BOOL m_bGetPicture;  // is get a picture
 	long m_lWidth;       //存储图片的宽度

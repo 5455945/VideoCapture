@@ -1,5 +1,5 @@
 #include "SampleGrabberCallback.h"
-#include "BmpToJpg.h"
+#include "ImageFormatConversion.h"
 
 SampleGrabberCallback::SampleGrabberCallback()
 {
@@ -119,15 +119,11 @@ BOOL SampleGrabberCallback::SaveBitmap(BYTE * pBuffer, long lBufferSize )
 	memcpy(szSrcFileName, pbuf, len);
 	memcpy(szDstFileName, pbuf, len);
 	memcpy(szDstFileName + len - 3, "jpg", 3);
-	BitmapToJpg(szSrcFileName, szDstFileName);
+	CImageFormatConversion	ifc;
+	bool bRet = ifc.ToJpg(szSrcFileName, szDstFileName, 100);
+
+	memcpy(szDstFileName + len - 3, "png", 3);
+	bRet = ifc.ToPng(szSrcFileName, szDstFileName);
 
 	return TRUE;
-}
-// bitmap图片转换成jpg格式
-bool SampleGrabberCallback::BitmapToJpg(const char* szSrcFileName, const char* szDstFileName)
-{
-	CBmpToJpg	m_bmpToJpg;
-	bool bRet = m_bmpToJpg.BMPToJPG(szSrcFileName, szDstFileName, 100);
-
-	return bRet;
 }
