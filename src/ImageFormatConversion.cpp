@@ -118,7 +118,7 @@ bool CImageFormatConversion::ToJpg(const wchar_t* szSrcFileName, const wchar_t* 
 		CLSID codecClsid;
 		EncoderParameters encoderParameters;
 		GdiplusStartupInput gdiplusStartupInput;
-		ULONG gdiplusToken;
+		ULONG_PTR gdiplusToken;
 		GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
 
 		GetCodecClsid(L"image/jpeg", &codecClsid);
@@ -156,7 +156,7 @@ bool CImageFormatConversion::ToBmp(const wchar_t* szSrcFileName, const wchar_t* 
 		CLSID codecClsid;
 		EncoderParameters encoderParameters;
 		GdiplusStartupInput gdiplusStartupInput;
-		ULONG gdiplusToken;
+		ULONG_PTR gdiplusToken;
 		GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
 
 		GetCodecClsid(L"image/bmp", &codecClsid);
@@ -190,7 +190,7 @@ bool CImageFormatConversion::ToPng(const wchar_t* szSrcFileName, const wchar_t* 
 		CLSID codecClsid;
 		//EncoderParameters encoderParameters;
 		GdiplusStartupInput gdiplusStartupInput;
-		ULONG gdiplusToken;
+		ULONG_PTR gdiplusToken;
 		GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
 
 		Status bStatus;
@@ -239,7 +239,7 @@ bool CImageFormatConversion::AddFont(const wchar_t* szSrcFileName, const wchar_t
 	CLSID codecClsid;
 	EncoderParameters encoderParameters;
 	GdiplusStartupInput gdiplusStartupInput;
-	ULONG gdiplusToken;
+	ULONG_PTR gdiplusToken;
 	GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
 
 	Image *pImage = new Image(szSrcFileName);
