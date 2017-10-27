@@ -2,12 +2,11 @@
 ---
 | **`Windows`** |
 |---------------------|
-| [![Build Status](https://ci.appveyor.com/project/5455945/videocapture)](https://ci.appveyor.com/project/5455945/videocapture)|
+|[![Build status](https://ci.appveyor.com/api/projects/status/1aw0rrd9gb4l9uc1?svg=true)](https://ci.appveyor.com/project/5455945/videocapture)|
 
 
 传统方式编译
 ---
-# VideoCapture
 Windows Video Audio Capture, Save BMP file
 
 by QQ:39539883   2016-12-04
