@@ -1,7 +1,9 @@
+ 
 ---
 | **`Windows`** |
 |---------------------|
-| [![Build Status](https://ci.appveyor.com/project/5455945/videocapture)](https://ci.appveyor.com/project/5455945/videocapture) |
+| [![Build Status](https://ci.appveyor.com/project/5455945/videocapture)](https://ci.appveyor.com/project/5455945/videocapture)|
+
 
 传统方式编译
 ---
