@@ -1,4 +1,4 @@
-version: "{build}"
+version: "1.0.{build}"
 
 configuration: Release
 
@@ -7,7 +7,6 @@ image:
 
 before_build:
   # 
-  
 build_script:
   # build
   - mkdir %APPVEYOR_BUILD_FOLDER%\build01
@@ -15,4 +14,19 @@ build_script:
   - cmake -G "Visual Studio 14 2015 Win64" ..
   - cmake --build . --config %CONFIGURATION% 
 
-  
+build:
+  verbosity: normal
+artifacts:
+- path: build01/$(configuration)/*
+  name: VideoCapture-v$(APPVEYOR_BUILD_VERSION)
+deploy:
+- provider: GitHub
+  tag: TagName
+  release: ReleaseName
+  description: ReleaseDescription
+  auth_token:
+    secure: K+gxcYq4xNoMwnXQJKBieLh7U/ETaGp5dtNQiyBBetDoDuDs5n8rwgylu0DBFMY8
+  repository: 5455945/VideoCapture
+  artifact: ArtifactsToDeploy
+  draft: false
+  force_update: false
