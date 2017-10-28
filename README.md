@@ -2,7 +2,7 @@
 ---
 | **`Windows`** |
 |---------------------|
-|[![Build status](https://ci.appveyor.com/api/projects/status/1aw0rrd9gb4l9uc1?svg=true)](https://ci.appveyor.com/project/5455945/videocapture)|
+|[![Build status](https://ci.appveyor.com/api/projects/status/opebwjf0j8ssiq2j/branch/master?svg=true)](https://ci.appveyor.com/project/5455945/videocapture/branch/master)|
 
 
 传统方式编译
