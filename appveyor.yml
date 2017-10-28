@@ -16,8 +16,9 @@ build_script:
 
 build:
   verbosity: normal
+  
 artifacts:
-- path: build01\$(configuration)
+- path: $(configuration)
   name: VideoCapture-v$(APPVEYOR_BUILD_VERSION)
 deploy:
 - provider: GitHub
