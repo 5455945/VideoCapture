@@ -21,14 +21,3 @@ build:
 artifacts:
 - path: build01/$(configuration)/VideoCapture.exe
   name: VideoCapture-v$(APPVEYOR_BUILD_VERSION)
-deploy:
-- provider: GitHub
-  tag: VideoCapture-v$(appveyor-build-version)
-  release: VideoCapture-v$(appveyor-build-version)
-  description: VideoCapture-v$(appveyor-build-version)
-  auth_token:
-    secure: K+gxcYq4xNoMwnXQJKBieLh7U/ETaGp5dtNQiyBBetDoDuDs5n8rwgylu0DBFMY8
-  repository: 5455945/VideoCapture
-  artifact: ArtifactToDeploy
-  draft: false
-  force_update: false
