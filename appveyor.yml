@@ -18,7 +18,7 @@ build:
   verbosity: normal
   
 artifacts:
-  - path: {APPVEYOR_BUILD_FOLDER}\build01\{CONFIGURATION}
+  - path: ${APPVEYOR_BUILD_FOLDER}/build01/${CONFIGURATION}
   name: VideoCapture-v{APPVEYOR_BUILD_VERSION}
 
 deploy:
