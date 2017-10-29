@@ -10,7 +10,8 @@ before_build:
 build_script:
   # build
   - mkdir %APPVEYOR_BUILD_FOLDER%\build01
-  - cd %APPVEYOR_BUILD_FOLDER%\build01
+  - mkdir %APPVEYOR_BUILD_FOLDER%\build01
+  - cd %APPVEYOR_BUILD_FOLDER%\build01\%CONFIGURATION%
   - cmake -G "Visual Studio 14 2015 Win64" ..
   - cmake --build . --config %CONFIGURATION% 
 
