@@ -21,12 +21,12 @@ after_build:
 
 deploy:
   - provider: GitHub Releases
-  tag: VideoCapture-v$(appveyor-build-version)
-  release: VideoCapture-v$(appveyor-build-version)
-  description: VideoCapture-v$(appveyor-build-version)
-  auth_token:
-    secure: K+gxcYq4xNoMwnXQJKBieLh7U/ETaGp5dtNQiyBBetDoDuDs5n8rwgylu0DBFMY8
-  repository: 5455945/VideoCapture
-  artifact: VideoCapture-v$(appveyor-build-version)
-  draft: false
-  force_update: false
+  - tag: VideoCapture-v$(appveyor-build-version)
+  - release: VideoCapture-v$(appveyor-build-version)
+  - description: VideoCapture-v$(appveyor-build-version)
+  - auth_token:
+  -  secure: K+gxcYq4xNoMwnXQJKBieLh7U/ETaGp5dtNQiyBBetDoDuDs5n8rwgylu0DBFMY8
+  - repository: 5455945/VideoCapture
+  - artifact: VideoCapture-v$(appveyor-build-version)
+  - draft: false
+  - force_update: false
