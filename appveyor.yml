@@ -22,7 +22,7 @@ artifacts:
     name: VideoCapture-v{APPVEYOR_BUILD_VERSION}
 
 deploy:
-  - provider: GitHub
+  - provider: "GitHub Releases"
   - tag: TagName
   - release: ReleaseName
   - description: ReleaseDescription
