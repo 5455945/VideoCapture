@@ -15,9 +15,6 @@ build_script:
   - cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX="install" ..
   - cmake --build . --config %CONFIGURATION%
   - cmake --config %CONFIGURATION% -P cmake_install.cmake
-  
-build:
-  - verbosity: normal
 
 after_build:
   - cmd: 7z a VideoCapture-{version}.zip %APPVEYOR_BUILD_FOLDER%\build01\install\bin\*
@@ -25,4 +22,3 @@ after_build:
 deploy:
   - path: VideoCapture-{version}.zip
   - name: VideoCapture-v$(appveyor-build-version)
-  
