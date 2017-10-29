@@ -18,6 +18,3 @@ build_script:
 build:
   verbosity: normal
   
-artifacts:
-- path: build01/$(configuration)/VideoCapture.exe
-  name: VideoCapture-v$(APPVEYOR_BUILD_VERSION)
