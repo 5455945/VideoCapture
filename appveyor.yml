@@ -18,8 +18,8 @@ build:
   verbosity: normal
   
 artifacts:
-- path: .
-  name: VideoCapture-v$(APPVEYOR_BUILD_VERSION)
+- path: build01\%CONFIGURATION%
+  name: VideoCapture-v%APPVEYOR_BUILD_VERSION%
 deploy:
 - provider: GitHub
   tag: TagName
