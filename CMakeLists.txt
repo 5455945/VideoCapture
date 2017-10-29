@@ -40,3 +40,5 @@ if (MSVC)
 			INPUT "${CMAKE_SOURCE_DIR}/cmake/VideoCapture.vcxproj.user.in")
 	endif()
 endif()
+
+install(TARGETS VideoCapture RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
