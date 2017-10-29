@@ -18,6 +18,6 @@ build_script:
 
 after_build:
   - 7z a VideoCapture.zip %APPVEYOR_BUILD_FOLDER%\build01\install\bin\*
-  - appveyor PushArtifact VideoCapture.zip -DeploymentName VideoCapture-v$(appveyor-build-version)
+  - appveyor PushArtifact VideoCapture.zip -DeploymentName VideoCapture
 
   
