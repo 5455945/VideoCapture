@@ -17,7 +17,7 @@ build_script:
   - cmake --config %CONFIGURATION% -P cmake_install.cmake
 
 after_build:
-  - 7z a VideoCapture.zip %APPVEYOR_BUILD_FOLDER%\build01\install\bin\*
+  - 7z a VideoCapture.zip %APPVEYOR_BUILD_FOLDER%\build01\install\bin\%CONFIGURATION%\*
   - appveyor PushArtifact VideoCapture.zip -DeploymentName VideoCapture
 
   
